@@ -1,14 +1,16 @@
+  
 import math
 import os
 
 
-def sub(a, b) -> int:
-    return math.floor(a - b)
+def add(a, b) -> int:
+    return math.floor(a + b)
 
 
-def word_count(sentence, word) -> int:
-    sentence = sentence.lower().split()
-    if word in sentence:
-        return sum([1 for x in sentence if x == word])
+def to_sentence(s) -> str:
+    s = s.capitalize()
+
+    if s.endswith('.'):
+        return s
     else:
-        return 0
+        return s + '.'
